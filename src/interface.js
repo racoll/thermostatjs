@@ -1,9 +1,8 @@
 $(document).ready(function() {
   var thermostat = new Thermostat();
   updateTemperature();
-});
 
-$('#temperature-up').on('click', function() { // event listener
+$('#temperature-up').click(function() { // event listener
   thermostat.up(); // update model
   updateTemperature(); // update view
 });
@@ -32,4 +31,8 @@ $("#powersaving-off").click(function() {
 
 function updateTemperature() {
   $("#temperature").text(thermostat.temperature);
+  console.log(thermostat.temperature);
+  $("#temperature").attr("class", thermostat.energyUsage());
+  console.log(thermostat.energyUsage());
 }
+});

@@ -15,10 +15,7 @@ Thermostat.prototype.getCurrentTemperature = function() { //then use prototype k
   return this.temperature; // the getCurrentTemperature function to our Thermostat.
 };
 
-Thermostat.prototype.up = function() {
-  this.temperature += 1;
-  // console.log(this.temperature)
-};
+
 
 Thermostat.prototype.down = function() {
   if (this.isMinimumTemperature()) {
@@ -38,9 +35,9 @@ Thermostat.prototype.isMinimumTemperature = function() {
   return this.temperature === this.MINIMUM_TEMPERATURE;
 };
 
-Thermostat.prototype.isMaximumTemperature = function() {
-  return this.temperature === this.MAXIMUM_TEMPERATURE;
-};
+// Thermostat.prototype.isMaximumTemperature = function() {
+//   return this.temperature === this.MAXIMUM_TEMPERATURE;
+// };
 
 Thermostat.prototype.isPowerSavingModeOn = function() {
   return this.powerSavingMode === true;
